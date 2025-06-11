@@ -1,0 +1,65 @@
+/* General About Section Styling */
+#about {
+    padding: 4rem 1rem;
+    background-color: #121212;
+    /* Soft background for contrast */
+    color: #343a40;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* About Section Heading */
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #7682e3;
+    /* Matches hero theme */
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+}
+
+/* Intro Text Styling */
+.about-content .intro {
+    font-size: 1.3rem;
+    color: whitesmoke;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    font-weight: bold;
+}
+
+/* Detailed Paragraph Styling */
+.about-content .details {
+    font-size: 1.1rem;
+    color: rgb(228, 201, 151);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Inspirational Quote Styling */
+.about-content .quote {
+    font-size: 1.1rem;
+    color: #dedddd;
+    font-style: italic;
+    margin-top: 1rem;
+    padding: 1rem 0;
+
+}
+
+/* Animation for Fade-In Effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

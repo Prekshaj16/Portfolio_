@@ -1,0 +1,93 @@
+/* General Skills Section Styling */
+#skills {
+    padding: 4rem 1rem;
+    background-color: #121212;
+    color: #343a40;
+    /* Matches text color in About section */
+}
+
+/* Skills Content Wrapper */
+.skills-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    animation: fadeIn 1.9s ease-in-out;
+}
+
+/* Skills Section Heading */
+#skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color:#7682e3;
+    /* Matches hero theme */
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+/* Skill List Styling */
+#skills ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+/* Individual Skill Items */
+#skills li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100px;
+    /* Adjust size based on your logo dimensions */
+    height: 100px;
+}
+
+/* Hover Effect for Skills */
+#skills li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Logo Styling */
+.skill-logo {
+    width: 60px;
+    /* Adjust to match the size of the logo */
+    height: auto;
+    object-fit: contain;
+}
+
+/* Animation for Fade-In Effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #skills ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #skills li {
+        width: 80px;
+        /* Smaller width for smaller screens */
+        margin: 10px;
+    }
+}

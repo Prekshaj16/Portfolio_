@@ -1,0 +1,125 @@
+/* General Portfolio Section Styling */
+#portfolio {
+    padding: 4rem 1rem;
+    background-color: #121212;
+    color: #343a40;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Portfolio Section Heading */
+#portfolio h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color:#7682e3;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+/* Projects Wrapper */
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    flex-wrap: wrap;
+    /* Allow the cards to wrap onto the next line when needed */
+}
+
+/* Individual Project Card Styling */
+.project-card {
+    background-color: #1f1f1f;
+    /* Darker background */
+    border-radius: 15px;
+    /* Rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    /* Stronger shadow with more depth */
+    padding: 30px;
+    width: 350px;
+    /* Increased width */
+    height: 450px;
+    /* Increased height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 1;
+    border: 2px solid #ff6f61;
+    /* Border color matching the theme */
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Added transition for smooth interaction */
+}
+
+/* Hover Effect for Project Cards */
+.project-card:hover {
+    transform: translateY(-10px);
+    /* Slight upward shift */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    /* Stronger shadow on hover */
+}
+
+/* Project Card Title */
+.project-card h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: whitesmoke;
+    /* Title color */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Project Card Description */
+.project-card p {
+    font-size: 1.2rem;
+    color: wheat;
+    /* Lighter text for description */
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-style: italic;
+    /* Italics for a more elegant description */
+}
+
+/* View Project Link */
+.project-card a {
+    font-size: 1.1rem;
+    color: #ff6f61;
+    /* Matching link color */
+    font-weight: 500;
+    text-decoration: none;
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for the link */
+.project-card a:hover {
+    color: #1e40af;
+    /* Link hover color */
+}
+
+/* Make sure the layout is responsive */
+@media (max-width: 768px) {
+    #portfolio h2 {
+        font-size: 2rem;
+        /* Smaller heading size for mobile */
+    }
+
+    .projects {
+        flex-direction: column;
+        /* Stack the cards vertically on small screens */
+        gap: 30px;
+    }
+
+    .project-card {
+        width: 300px;
+        /* Adjust width for smaller screens */
+        height: 380px;
+        /* Adjust height for smaller screens */
+    }
+}

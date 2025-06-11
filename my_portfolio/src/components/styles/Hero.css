@@ -1,0 +1,287 @@
+/* Hero Section Styling */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1rem;
+    background-color: #121212;
+    color: white;
+    height: 88vh;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 3rem;
+    padding: 0 2rem;
+}
+
+/* Text Section Styling */
+.hero-text {
+    flex: 1;
+}
+
+.hero-text .intro-text {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #a59fe9;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+
+/* Typing Effect for h3 */
+.hero-text h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    color: #a6a0fb;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #a5a0ff;
+    /* Creates the typing cursor effect */
+    width: 0;
+    /* Initially no width */
+    animation: typing 4s steps(30) 1s forwards, blinkCaret 0.75s step-end infinite;
+    /* Typing animation */
+}
+
+/* Blink effect for the typing cursor */
+@keyframes blinkCaret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 23em;
+        /* Adjust the width based on the text length */
+    }
+}
+
+.hero-text .description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #eee;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.hero-buttons .btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero-buttons .btn.primary {
+    background: linear-gradient(189deg, rgba(255, 111, 97, 0.8), rgba(18, 18, 18, 0.8));
+    color: white;
+}
+
+.hero-buttons .btn.primary:hover {
+    background: #e3544b;
+}
+
+.hero-buttons .btn.secondary {
+    background: transparent;
+    color: #ff6f61;
+    border: 2px solid #ff6f61;
+}
+
+.hero-buttons .btn.secondary:hover {
+    background: #ff6f61;
+    color: white;
+}
+
+.hero-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 115px;
+    animation: slideInFromRight 2.5s ease-out;
+}
+
+/* Circular gradient shape */
+.hero-image::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+
+    background: radial-gradient(circle, rgba(255, 111, 97, 0.8), rgba(18, 18, 18, 0.8));
+    border-radius: 50%;
+    z-index: 1;
+    /* Behind the image */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(20px);
+    /* Optional for a glowing effect */
+}
+
+/* Styling the image */
+.hero-image img {
+    width: 400px;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    /* Ensure the image appears above the background shape */
+    border-radius: 10px;
+    /* Match desired style */
+    animation: scaleUp 2s ease-in-out;
+}
+
+
+
+/* Keyframes for Animations */
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive Styling with Media Queries */
+@media (max-width: 1024px) {
+    #hero {
+        padding: 3rem 1rem;
+        height: auto;
+        /* Allow height to adjust */
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text h3 {
+        font-size: 1.4rem;
+    }
+
+    .hero-image img {
+        width: 300px;
+    }
+
+    .hero-image::before {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        /* Stack items vertically */
+        text-align: center;
+        /* Center-align content */
+        gap: 2rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text h3 {
+        font-size: 1.3rem;
+    }
+
+    .hero-buttons .btn {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .hero-image img {
+        width: 250px;
+    }
+
+    .hero-image::before {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .hero-buttons .btn {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .hero-image img {
+        width: 200px;
+    }
+
+    .hero-image::before {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero-text h3 {
+        font-size: 1.2rem;
+        /* Adjust font size for smaller screens */
+        white-space: normal;
+        /* Allow text to wrap onto the next line */
+        word-wrap: break-word;
+        /* Ensure long words are broken properly */
+        width: auto;
+        /* Let the width adjust naturally */
+    }
+
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 90%;
+            /* Typing animation now expands to full width */
+        }
+    }
+
+}
