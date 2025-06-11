@@ -17,7 +17,7 @@ export const projects = [
         title: 'Portfolio',
         description: 'This is a modern web app built with React, TypeScript, Vite, Tailwind CSS, and shadcn-ui This modern web app is built with React and TypeScript for a scalable and maintainable structure. ' ,
 
-        link: 'https://pf-five-jet.vercel.app',
+        link: 'https://pf-silk.vercel.app/',
     },
 
 ];
